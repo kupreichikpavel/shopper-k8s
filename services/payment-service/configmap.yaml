@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: payment-service-config
+  namespace: shopper
+data:
+  DB_HOST: payment-db
+  DB_PORT: "27017"
+  KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+  PAYMENT_EVENTS_TOPIC: payment-events
+  JWT_ISSUER_URI: http://keycloak:8080/realms/shopper
+  JWT_JWK_SET_URI: http://keycloak:8080/realms/shopper/protocol/openid-connect/certs
+  JWT_AUDIENCE: payment-service
+  RANDOM_ORG_BASE_URL: https://www.random.org
+  RANDOM_ORG_TIMEOUT_MS: "5000"

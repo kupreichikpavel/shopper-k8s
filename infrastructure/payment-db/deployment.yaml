@@ -67,6 +67,7 @@ spec:
                   --authenticationDatabase admin
                   --eval "db.adminCommand('ping').ok"
             initialDelaySeconds: 15
+            timeoutSeconds: 15
             periodSeconds: 10
             failureThreshold: 10
           livenessProbe:
@@ -81,6 +82,7 @@ spec:
                   --authenticationDatabase admin
                   --eval "db.adminCommand('ping').ok"
             initialDelaySeconds: 60
+            timeoutSeconds: 15
             periodSeconds: 20
             failureThreshold: 3
           resources:
