@@ -3,3 +3,4 @@
 *.local.yaml
 *.local.yml
 kubeconfig
+config/secrets.yaml
